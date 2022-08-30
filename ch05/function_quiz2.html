@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function bgBtextW() {
+        //     var b = document.getElementById("theBody");
+        //     var t = document.getElementById("text");
+
+        //     b.style.backgroundColor = 'black';
+        //     t.style.color = 'white';
+        // }
+
+        // function bgGtextW() {
+        //     var b = document.getElementById("theBody");
+        //     var t = document.getElementById("text");
+
+        //     b.style.backgroundColor = 'green';
+        //     t.style.color = 'white';
+        // }
+
+        // function bgYtextB() {
+        //     var b = document.getElementById("theBody");
+        //     var t = document.getElementById("text");
+
+        //     b.style.backgroundColor = 'yellow';
+        //     t.style.color = 'blue';
+        // }
+
+        // function bgWtextB() {
+        //     var b = document.getElementById("theBody");
+        //     var t = document.getElementById("text");
+
+        //     b.style.backgroundColor = 'white';
+        //     t.style.color = 'black';
+        // }
+
+        function colorChange(bgColor, txtColor) {
+            var b = document.getElementById("theBody");
+
+            b.style.setProperty('background-color', bgColor);
+            b.style.setProperty('color', txtColor);
+        }
+    </script>
+</head>
+<body id="theBody">
+    <button onclick="colorChange('black', 'white')">검정 배경, 흰색 글씨</button>
+    <button onclick="colorChange('green', 'white')">초록 배경, 흰색 글씨</button>
+    <button onclick="colorChange('yellow', 'blue')">노랑 배경, 파랑 글씨</button>
+    <button onclick="colorChange('white', 'black')">흰색 배경, 검정 글씨</button>
+    <h1>배경색과 글자색 바꾸기</h1>
+    <p>DOM은 Document Object Model의 약자로, 웹 문서에 접근할 수 있도록 정의해 놓은 표준입니다.</p>
+</body>
+</html>

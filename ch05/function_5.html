@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function zoomIn() {
+            document.getElementById("bee").width = 300;
+            document.getElementById("bee").height = 195;
+        }
+
+        function zoomOut() {
+            document.getElementById("bee").width = 100;
+            document.getElementById("bee").height = 65;
+        }
+
+        function zoom(zoomin) {
+            if(zoomin) {
+                document.getElementById("bee").width = 300;
+                document.getElementById("bee").height = 195;
+            }
+
+            else {
+                document.getElementById("bee").width = 100;
+                document.getElementById("bee").height = 65;
+            }
+        }
+
+        function zoomInOut(newWidth, newHeight) {
+            document.getElementById("bee").width = newWidth;
+            document.getElementById("bee").height = newHeight;
+        }
+    </script>
+</head>
+<body>
+    <img src="../images/bee.jpg" width="200" height="130" id="bee">
+    <button onclick="zoomIn()">ZoomIn</button>
+    <button onclick="zoomOut()">ZoomOut</button>
+    <button onclick="zoom(true)">ZoomIn</button>
+    <button onclick="zoom(false)">ZoomOut</button>
+    <button onclick="zoomInOut(300, 195)">ZoomIn</button>
+    <button onclick="zoomInOut(100, 65)">ZoomOut</button>
+</body>
+</html>

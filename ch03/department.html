@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #0c3268;
+            color: white;
+            text-align: center;
+        }
+
+        big {
+            color: yellow;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: 700;
+            margin-top: 80px;
+        }
+    </style>
+    <script>
+        var dep = prompt("학과선택 : 1. 전기전자 2. 건축공 3. 컴퓨터공 4. 신소재공");
+        var user_dep;
+        var num;
+
+        switch (dep) {
+            case '1' :
+                user_dep = "전기전자공학과";
+                num = 2011;
+                break;
+            case '2' :
+                user_dep = "건축공학과";
+                num = 2014;
+                break;
+            case '3' :
+                user_dep = "컴퓨터공학과";
+                num = 2012;
+                break;
+            case '4' :
+                user_dep = "신소재공학과";
+                num = 2013;
+                break; 
+            default :
+                document.write("<p>잘못 입력했습니다.</p>");
+        }
+
+        if (user_dep && num) {
+            document.write("<p>" + user_dep + " 실습실은 <big>" + num + "호</big> 입니다.</p>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
