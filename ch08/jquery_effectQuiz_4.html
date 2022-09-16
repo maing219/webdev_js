@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+           $(".img").click(function() {    
+                $(this).clone().fadeIn(1000).appendTo($(".bigImg"));
+           })
+        });
+    </script>
+</head>
+<body>
+    <h1>사용법</h1>
+    <ol>
+        <li>작은 이미지를 클릭하면 큰 이미지가 나타납니다.</li>
+        <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+    <div>
+        <img src="spring.jpg" width="250px" height="180px" class="img">
+        <img src="summer.jpg" width="250px" height="180px" class="img">
+        <img src="fall.jpg" width="250px" height="180px" class="img">
+        <img src="winter.jpg" width="250px" height="180px" class="img">
+    </div>
+    <p class="bigImg"></p>
+</body>
+</html>

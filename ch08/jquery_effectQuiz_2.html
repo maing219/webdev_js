@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $(".btn").click(function() {
+                // $(".img").animate({
+                //     width: "800px"
+                // }, 2000, function() {
+                //     $(".img").animate({
+                //         height: "600px"
+                //     }, 2000, function() {
+                //         $(".img").animate({
+                //             borderRadius: "50px"
+                //         }, 2000)
+                //     });
+                // });
+
+                $(".img")
+                .animate({
+                    width: "600px"
+                }, "slow")
+                .animate({
+                    height: "395px"
+                }, "slow")
+                .animate({
+                    borderRadius: "50px"
+                }, "slow")
+
+                $(".caption").animate({
+                    fontSize: "1.5em"
+                }, "slow")
+            });
+        });
+    </script>
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        span {
+            color: blue;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="winter.JPG" class="img" width="400px" height="265px">
+        <p class="caption"><span>한국의 겨울</span> 너의 부재를 덮어주는 사방의 눈,눈.</p>
+        <button class="btn">확대하기</button>
+    </div>
+</body>
+</html>

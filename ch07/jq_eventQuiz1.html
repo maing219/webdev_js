@@ -20,7 +20,8 @@
             });
 
             function addList() {
-                $(".subjectRecord").append('<li><a href="#" class="subjectList">' + $(".subject").val() + '</a></li>');
+                $(".subjectRecord").prepend('<li><a href="#" class="subjectList">' + $(".subject").val() + '</a></li>');
+                $(".subject").val("");
             }
         });
     </script>
