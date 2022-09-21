@@ -8,9 +8,19 @@
     <script src="js/jquery.js"></script>
     <script>
         $(function() {
-           $(".img").click(function() {    
-                $(this).clone().fadeIn(1000).appendTo($(".bigImg"));
-           })
+            $(".bigImg").hide();
+            
+            $("img[id*=small]").each(function(idx, obj) {
+                $(obj).click(function() {
+                    $("#big"+(idx+1)).fadeIn(1000);
+                });
+            });
+
+            $("img[id*=big]").each(function(idx, obj) {
+                $(obj).click(function() {
+                    $("#big"+(idx+1)).fadeOut(1000);
+                });
+            });
         });
     </script>
 </head>
@@ -21,10 +31,16 @@
         <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
     </ol>
     <div>
-        <img src="spring.jpg" width="250px" height="180px" class="img">
-        <img src="summer.jpg" width="250px" height="180px" class="img">
-        <img src="fall.jpg" width="250px" height="180px" class="img">
-        <img src="winter.jpg" width="250px" height="180px" class="img">
+        <img src="spring.jpg" width="250px" height="180px" class="img" id="small1">
+        <img src="summer.jpg" width="250px" height="180px" class="img" id="small2">
+        <img src="fall.jpg" width="250px" height="180px" class="img" id="small3">
+        <img src="winter.jpg" width="250px" height="180px" class="img" id="small4">
+    </div>
+    <div>
+        <img src="spring.jpg" class="bigImg" id="big1">
+        <img src="summer.jpg" class="bigImg" id="big2">
+        <img src="fall.jpg" class="bigImg" id="big3">
+        <img src="winter.jpg" class="bigImg" id="big4">
     </div>
     <p class="bigImg"></p>
 </body>

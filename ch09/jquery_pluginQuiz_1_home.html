@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#home").on("mouseover", function() {
+                $("#home").css("background-color", "white");
+            });
+        });
+    </script>
+    <style>
+        * { margin: 0; padding: 0; }
+        #background { background: url('images/pic_4.jpg') no-repeat center fixed; background-size: cover; min-height: 100vh; }
+        #container { margin: 0 auto; width: 960px; }
+        nav { text-align: center; margin: 10px 0 0 0; background-color: black; }
+        nav ul { list-style-type: none; }
+        nav li { display: inline; width: 25%;}
+        nav li a { color: white; text-decoration: none; }
+        article, footer { border: 2px solid black; }
+        article { height: 600px; background-color: rgba(255, 255, 255, 85%); border-bottom: 0; padding: 50px;}
+        footer { background-color: gray; padding: 20px; padding-top: 40px; }
+        footer p { margin: 5px 0; color: white; font-size: 0.5em;}
+    </style>
+</head>
+<body>
+    <div id="background">
+        <div id="container">
+            <header>
+                <h1>String</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li id="home"><a href="jquery_pluginQuiz_1_home.html">홈</a></li>
+                    <li id="intro"><a href="#">String 소개</a></li>
+                    <li id="activity"><a href="#">String의 활동</a></li>
+                    <li id="plan"><a href="#">올해 활동계획</a></li>
+                </ul>
+            </nav>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur libero soluta laboriosam id mollitia quam tenetur alias eius, beatae ipsa debitis necessitatibus ullam nulla, dolor minima nemo ut dignissimos quae.</p>
+            </article>
+            <footer>
+                <p>아무시 아무동 어쩌구저쩌구</p>
+                <p>관리자 어쩌구</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
